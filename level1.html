@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>level1 module &mdash; Escape The Mazerooms 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="level2 module" href="level2.html" />
+    <link rel="prev" title="level0 module" href="level0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Escape The Mazerooms
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Maturitni projekt</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">intro module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level0.html">level0 module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">level1 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#level1.Balloon"><code class="docutils literal notranslate"><span class="pre">Balloon</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level1.Balloon.draw"><code class="docutils literal notranslate"><span class="pre">Balloon.draw()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level1.JumpscareManager"><code class="docutils literal notranslate"><span class="pre">JumpscareManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level1.JumpscareManager.trigger_jumpscare"><code class="docutils literal notranslate"><span class="pre">JumpscareManager.trigger_jumpscare()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level1.MusicManager"><code class="docutils literal notranslate"><span class="pre">MusicManager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#level1.Television"><code class="docutils literal notranslate"><span class="pre">Television</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level1.Television.draw"><code class="docutils literal notranslate"><span class="pre">Television.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.Television.update"><code class="docutils literal notranslate"><span class="pre">Television.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level1.level1"><code class="docutils literal notranslate"><span class="pre">level1</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.change_level"><code class="docutils literal notranslate"><span class="pre">level1.change_level()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.handle_events"><code class="docutils literal notranslate"><span class="pre">level1.handle_events()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.main_loop"><code class="docutils literal notranslate"><span class="pre">level1.main_loop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.pop_balloon"><code class="docutils literal notranslate"><span class="pre">level1.pop_balloon()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.quit"><code class="docutils literal notranslate"><span class="pre">level1.quit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.render"><code class="docutils literal notranslate"><span class="pre">level1.render()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.spawn_balloons"><code class="docutils literal notranslate"><span class="pre">level1.spawn_balloons()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level1.level1.update"><code class="docutils literal notranslate"><span class="pre">level1.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level2.html">level2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level3_end.html">level3_end module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">menu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outro.html">outro module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">settings module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Escape The Mazerooms</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Maturitni projekt</a></li>
+      <li class="breadcrumb-item active">level1 module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/level1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-level1">
+<span id="level1-module"></span><h1>level1 module<a class="headerlink" href="#module-level1" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="level1.Balloon">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level1.</span></span><span class="sig-name descname"><span class="pre">Balloon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#Balloon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.Balloon" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a balloon in the game, which can be popped by the player.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.Balloon.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#Balloon.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.Balloon.draw" title="Link to this definition"></a></dt>
+<dd><p>Draws the balloon on the game screen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level1.JumpscareManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level1.</span></span><span class="sig-name descname"><span class="pre">JumpscareManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#JumpscareManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.JumpscareManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages jumpscares in response to player errors or specific game events.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.JumpscareManager.trigger_jumpscare">
+<span class="sig-name descname"><span class="pre">trigger_jumpscare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#JumpscareManager.trigger_jumpscare"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.JumpscareManager.trigger_jumpscare" title="Link to this definition"></a></dt>
+<dd><p>Triggers a jumpscare effect on the screen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level1.MusicManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level1.</span></span><span class="sig-name descname"><span class="pre">MusicManager</span></span><a class="reference internal" href="_modules/level1.html#MusicManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.MusicManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages background music and ambient sounds for the level.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level1.Television">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level1.</span></span><span class="sig-name descname"><span class="pre">Television</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#Television"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.Television" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a television that displays the current target color for the player to interact with.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.Television.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#Television.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.Television.draw" title="Link to this definition"></a></dt>
+<dd><p>Draws the television on the screen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.Television.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#Television.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.Television.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the color displayed on the television.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>new_color</strong> (<em>str</em>) – The new color to display.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level1.level1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level1.</span></span><span class="sig-name descname"><span class="pre">level1</span></span><a class="reference internal" href="_modules/level1.html#level1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents the second level of the game where players interact with balloons and a color sequence
+displayed on a television. Correct interactions lead to level progression, while errors may trigger
+jumpscares.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.change_level">
+<span class="sig-name descname"><span class="pre">change_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.change_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.change_level" title="Link to this definition"></a></dt>
+<dd><p>Changes to the next level of the game upon successful completion.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.handle_events">
+<span class="sig-name descname"><span class="pre">handle_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.handle_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.handle_events" title="Link to this definition"></a></dt>
+<dd><p>Handles user input events, including balloon popping and player movement.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.main_loop">
+<span class="sig-name descname"><span class="pre">main_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.main_loop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.main_loop" title="Link to this definition"></a></dt>
+<dd><p>Main game loop for level1, handling events, updates, and rendering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.pop_balloon">
+<span class="sig-name descname"><span class="pre">pop_balloon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.pop_balloon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.pop_balloon" title="Link to this definition"></a></dt>
+<dd><p>Checks for collisions between player and balloons and handles game logic for balloon popping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.quit">
+<span class="sig-name descname"><span class="pre">quit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.quit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.quit" title="Link to this definition"></a></dt>
+<dd><p>Quits the game and exits the program.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.render"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.render" title="Link to this definition"></a></dt>
+<dd><p>Renders all game elements to the screen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.spawn_balloons">
+<span class="sig-name descname"><span class="pre">spawn_balloons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.spawn_balloons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.spawn_balloons" title="Link to this definition"></a></dt>
+<dd><p>Creates a list of balloon objects at random positions on the screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of balloon objects.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level1.level1.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level1.html#level1.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level1.level1.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the game state, including player and game object movements.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="level0.html" class="btn btn-neutral float-left" title="level0 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="level2.html" class="btn btn-neutral float-right" title="level2 module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Antonin Hodan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

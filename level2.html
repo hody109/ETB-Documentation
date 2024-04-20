@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>level2 module &mdash; Escape The Mazerooms 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="level3_end module" href="level3_end.html" />
+    <link rel="prev" title="level1 module" href="level1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Escape The Mazerooms
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Maturitni projekt</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">intro module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level0.html">level0 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level1.html">level1 module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">level2 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#level2.Computer"><code class="docutils literal notranslate"><span class="pre">Computer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level2.Computer.check_answer"><code class="docutils literal notranslate"><span class="pre">Computer.check_answer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.Computer.draw"><code class="docutils literal notranslate"><span class="pre">Computer.draw()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level2.InteractiveObject"><code class="docutils literal notranslate"><span class="pre">InteractiveObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level2.InteractiveObject.draw"><code class="docutils literal notranslate"><span class="pre">InteractiveObject.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.InteractiveObject.play_sound"><code class="docutils literal notranslate"><span class="pre">InteractiveObject.play_sound()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.InteractiveObject.update"><code class="docutils literal notranslate"><span class="pre">InteractiveObject.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level2.JumpscareManager"><code class="docutils literal notranslate"><span class="pre">JumpscareManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level2.JumpscareManager.trigger_jumpscare"><code class="docutils literal notranslate"><span class="pre">JumpscareManager.trigger_jumpscare()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#level2.MusicManager"><code class="docutils literal notranslate"><span class="pre">MusicManager</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#level2.level2"><code class="docutils literal notranslate"><span class="pre">level2</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level2.level2.change_level"><code class="docutils literal notranslate"><span class="pre">level2.change_level()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.level2.handle_events"><code class="docutils literal notranslate"><span class="pre">level2.handle_events()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.level2.main_loop"><code class="docutils literal notranslate"><span class="pre">level2.main_loop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.level2.quit"><code class="docutils literal notranslate"><span class="pre">level2.quit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.level2.render"><code class="docutils literal notranslate"><span class="pre">level2.render()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level2.level2.update"><code class="docutils literal notranslate"><span class="pre">level2.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level3_end.html">level3_end module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">menu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outro.html">outro module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">settings module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Escape The Mazerooms</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Maturitni projekt</a></li>
+      <li class="breadcrumb-item active">level2 module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/level2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-level2">
+<span id="level2-module"></span><h1>level2 module<a class="headerlink" href="#module-level2" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="level2.Computer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level2.</span></span><span class="sig-name descname"><span class="pre">Computer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#Computer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.Computer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a computer within the game level that can interact with the player through a question-answer interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.Computer.check_answer">
+<span class="sig-name descname"><span class="pre">check_answer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">answer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#Computer.check_answer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.Computer.check_answer" title="Link to this definition"></a></dt>
+<dd><p>Checks the player’s answer and determines if it is correct, leading to level progression or other outcomes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>answer</strong> (<em>str</em>) – The player’s input answer.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.Computer.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#Computer.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.Computer.draw" title="Link to this definition"></a></dt>
+<dd><p>Draws the computer on the screen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level2.InteractiveObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level2.</span></span><span class="sig-name descname"><span class="pre">InteractiveObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#InteractiveObject"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.InteractiveObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents interactive objects within the game that can respond to player actions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.InteractiveObject.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#InteractiveObject.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.InteractiveObject.draw" title="Link to this definition"></a></dt>
+<dd><p>Draws the interactive object on the screen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.InteractiveObject.play_sound">
+<span class="sig-name descname"><span class="pre">play_sound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#InteractiveObject.play_sound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.InteractiveObject.play_sound" title="Link to this definition"></a></dt>
+<dd><p>Plays a sound associated with interaction with the object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.InteractiveObject.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#InteractiveObject.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.InteractiveObject.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the state of InterActive object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level2.JumpscareManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level2.</span></span><span class="sig-name descname"><span class="pre">JumpscareManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#JumpscareManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.JumpscareManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages jumpscare triggers based on certain game conditions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.JumpscareManager.trigger_jumpscare">
+<span class="sig-name descname"><span class="pre">trigger_jumpscare</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#JumpscareManager.trigger_jumpscare"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.JumpscareManager.trigger_jumpscare" title="Link to this definition"></a></dt>
+<dd><p>Triggers a jumpscare effect visually and audibly.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level2.MusicManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level2.</span></span><span class="sig-name descname"><span class="pre">MusicManager</span></span><a class="reference internal" href="_modules/level2.html#MusicManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.MusicManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages background music and sound effects for the level.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="level2.level2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">level2.</span></span><span class="sig-name descname"><span class="pre">level2</span></span><a class="reference internal" href="_modules/level2.html#level2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The second level of the game featuring interactions with NPCs, a computer, and various other interactive objects.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.level2.change_level">
+<span class="sig-name descname"><span class="pre">change_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#level2.change_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2.change_level" title="Link to this definition"></a></dt>
+<dd><p>Handles the transition to the next level of the game.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.level2.handle_events">
+<span class="sig-name descname"><span class="pre">handle_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#level2.handle_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2.handle_events" title="Link to this definition"></a></dt>
+<dd><p>Handles all player input events and triggers corresponding game logic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.level2.main_loop">
+<span class="sig-name descname"><span class="pre">main_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#level2.main_loop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2.main_loop" title="Link to this definition"></a></dt>
+<dd><p>Main game loop that handles event processing, game state updates, and rendering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.level2.quit">
+<span class="sig-name descname"><span class="pre">quit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#level2.quit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2.quit" title="Link to this definition"></a></dt>
+<dd><p>Quits the game and exits the program.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.level2.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#level2.render"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2.render" title="Link to this definition"></a></dt>
+<dd><p>Renders all game elements to the screen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="level2.level2.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/level2.html#level2.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#level2.level2.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the game state, including player, NPC, and other interactive elements.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="level1.html" class="btn btn-neutral float-left" title="level1 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="level3_end.html" class="btn btn-neutral float-right" title="level3_end module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Antonin Hodan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

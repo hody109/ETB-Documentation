@@ -1,0 +1,7 @@
+level2 module
+=============
+
+.. automodule:: level2
+   :members:
+   :undoc-members:
+   :show-inheritance:

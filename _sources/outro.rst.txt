@@ -1,0 +1,7 @@
+outro module
+============
+
+.. automodule:: outro
+   :members:
+   :undoc-members:
+   :show-inheritance:
